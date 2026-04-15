@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrés Felipe Ramos | Soluciones Topográficas Avanzadas</title>
+    <title>Topógrafos de Cundinamarca | Ingeniería de Precisión</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root {
-            --primario: #FFCC00;
-            --secundario: #0A192F;
+            --primario: #FFCC00; 
+            --secundario: #0A2540; 
             --acento: #FFD600;
             --fondo: #fcfcfc;
             --texto-principal: #ffffff;
@@ -32,7 +32,7 @@
 
         /* --- Navegación --- */
         nav {
-            background: rgba(10, 25, 47, 0.95);
+            background: var(--secundario);
             padding: 1rem 8%;
             display: flex;
             justify-content: space-between;
@@ -41,16 +41,15 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            backdrop-filter: blur(5px);
         }
 
         .logo { 
             font-family: var(--fuente-titulos);
             font-weight: 500; 
             color: var(--blanco); 
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             text-transform: uppercase;
-            letter-spacing: 1px; /* Reducido para evitar cortes */
+            letter-spacing: 1px;
         }
         .logo span { color: var(--primario); }
 
@@ -63,16 +62,14 @@
             text-transform: uppercase;
             transition: 0.3s;
         }
-
         .menu a:hover { color: var(--primario); }
 
         /* --- Hero Section --- */
         .hero {
-            height: 100vh;
+            height: 85vh;
             background-image: url('ImagenTitulo.png'); 
             background-size: cover; 
-            background-position: center center;
-            background-repeat: no-repeat;
+            background-position: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -87,80 +84,64 @@
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(10, 25, 47, 0.5); 
+            background: rgba(10, 37, 64, 0.65); 
             z-index: 1;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-            width: 100%;
-            max-width: 900px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
 
-        /* CORRECCIÓN AQUÍ: Ajuste de espaciado y padding */
         .hero h1 { 
             font-family: var(--fuente-titulos);
-            font-size: clamp(2.2rem, 6vw, 4.5rem); 
-            font-weight: 500;
+            font-size: clamp(2rem, 5vw, 4rem); 
             text-transform: uppercase;
-            letter-spacing: 1px; /* Reducido para mejorar legibilidad */
+            letter-spacing: 1px;
             margin-bottom: 0.5rem; 
-            padding-right: 10px; /* Espacio extra para que no se corte la última letra */
-            display: inline-block;
+            padding-right: 5px;
         }
 
         .hero p { 
-            font-size: 1.3rem; 
+            font-size: 1.4rem; 
             font-weight: 400;
-            opacity: 0.9; 
-            margin-bottom: 2.5rem; 
-        }
-
-        .btn-main {
-            font-family: var(--fuente-titulos);
-            background: var(--primario);
-            color: var(--secundario);
-            border: none;
-            padding: 18px 40px;
-            font-weight: 500;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.4s;
-            text-transform: uppercase;
-            box-shadow: 0 4px 20px rgba(255, 204, 0, 0.5);
-        }
-
-        .btn-main:hover {
-            transform: translateY(-3px);
-            background: var(--acento);
+            margin-bottom: 2rem;
+            color: var(--primario);
         }
 
         /* --- Secciones --- */
-        section { padding: 90px 8%; max-width: 1300px; margin: auto; }
+        section { padding: 80px 8%; max-width: 1200px; margin: auto; }
 
         h2 {
             font-family: var(--fuente-titulos);
             color: var(--secundario);
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            position: relative;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
         }
 
         h2::after {
             content: '';
             display: block;
-            width: 70px;
+            width: 60px;
             height: 4px;
             background: var(--primario);
             margin-top: 10px;
         }
 
+        /* --- Perfil Profesional --- */
+        .profile-text {
+            font-size: 1.15rem;
+            color: var(--texto-cuerpo);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* --- Galería de Proyectos (RESTAURADA) --- */
         .galeria {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
@@ -183,7 +164,7 @@
         .proyecto-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(135deg, rgba(10,25,47,0.9) 0%, rgba(255,204,0,0.7) 100%);
+            background: linear-gradient(135deg, rgba(10,37,64,0.9) 0%, rgba(255,204,0,0.7) 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -191,57 +172,71 @@
             color: var(--blanco);
             opacity: 0;
             transition: 0.4s;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
         }
 
         .proyecto-card:hover .proyecto-overlay { opacity: 1; }
 
+        /* --- Contacto --- */
         .contacto-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
         }
 
         .info-item { 
-            text-align: center; 
-            padding: 40px; 
-            background: var(--blanco); 
-            border-radius: 12px; 
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            padding: 30px; 
+            background: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Evita que el contenido largo rompa el diseño */
         }
 
-        .info-item i { font-size: 2.5rem; color: var(--primario); margin-bottom: 20px; }
+        .info-item i { font-size: 2rem; color: var(--secundario); margin-bottom: 15px; }
+        .info-item h4 { font-family: var(--fuente-titulos); text-transform: uppercase; margin-bottom: 10px; }
         
+        /* CORRECCIÓN CORREO: Permite que el texto largo se ajuste sin cortarse */
+        .info-item p { 
+            font-weight: 600; 
+            color: var(--secundario);
+            word-break: break-all; 
+            max-width: 100%;
+        }
+
         .qr-code {
             width: 150px;
             height: 150px;
-            margin-top: 10px;
-            border: 2px solid var(--primario);
+            margin-top: 15px;
+            border: 4px solid var(--primario); /* RECUADRO AMARILLO RESTAURADO */
             padding: 5px;
             background: white;
         }
 
         footer {
             background: var(--secundario);
-            color: rgba(255,255,255,0.7);
+            color: #fff;
             text-align: center;
-            padding: 50px 8%;
+            padding: 40px;
+            font-size: 0.9rem;
         }
-        footer span { color: var(--primario); }
+        footer span { color: var(--primario); font-weight: bold; }
+
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">AFRM <span>Topografía</span></div>
+        <div class="logo">Topógrafos de <span>Cundinamarca</span></div>
         <div class="menu">
             <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Perfil</a>
+            <a href="#perfil">Nosotros</a>
             <a href="#proyectos">Proyectos</a>
             <a href="#contacto">Contacto</a>
         </div>
@@ -249,16 +244,21 @@
 
     <header class="hero" id="inicio">
         <div class="hero-content">
-            <h1>Andrés Felipe Ramos</h1>
-            <p>Ingeniería y Precisión Geoespacial de Vanguardia</p>
-            <button class="btn-main" onclick="document.getElementById('proyectos').scrollIntoView({behavior:'smooth'})">Ver Soluciones</button>
+            <h1>Miguel Muñoz - Andrés Ramos</h1>
+            <p>Especialistas en Topografía de Alta Precisión</p>
         </div>
     </header>
 
     <main>
-        <section id="sobre-mi">
+        <section id="perfil">
             <h2>Perfil Profesional</h2>
-            <p>Tecnólogo en Topografía enfocado en la aplicación de tecnologías de captura masiva de datos y procesamiento geoespacial avanzado.</p>
+            <div class="profile-text">
+                <p>
+                    Especialistas en Topografía Aplicada con enfoque en la gestión de ecosistemas geoespaciales complejos. 
+                    Contamos con una sólida trayectoria en la implementación de metodologías de captura masiva y modelamiento de datos de alta fidelidad. 
+                    Orientados a la eficiencia operativa mediante el procesamiento avanzado de nubes de puntos y la automatización de análisis geoespaciales para proyectos de infraestructura y desarrollo territorial.
+                </p>
+            </div>
         </section>
 
         <section id="proyectos">
@@ -271,33 +271,40 @@
                         <p>Georreferenciación centimétrica para deslinde de predios rurales.</p>
                     </div>
                 </article>
+                <article class="proyecto-card">
+                    <div class="bg-image" style="background-image: url('url_proyecto2.jpg');"></div>
+                    <div class="proyecto-overlay">
+                        <h3>Fotogrametría Aérea</h3>
+                        <p>Generación de ortomosaicos y modelos digitales de elevación.</p>
+                    </div>
+                </article>
             </div>
         </section>
 
         <section id="contacto">
-            <h2>Hablemos de tu próximo proyecto</h2>
+            <h2>Información de Contacto</h2>
             <div class="contacto-grid">
                 <div class="info-item">
-                    <i class="fas fa-envelope-open-text"></i>
-                    <h4>Correo</h4>
-                    <p>andres.ramos@ejemplo.com</p>
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Llámanos</h4>
+                    <p>(57) 312 345 6789</p>
                 </div>
                 <div class="info-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h4>Teléfono</h4>
-                    <p>+57 300 000 0000</p>
+                    <i class="fas fa-envelope"></i>
+                    <h4>Correo</h4>
+                    <p>contacto@topografosdecundinamarca.co</p>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-qrcode"></i>
                     <h4>Escanéame</h4>
-                    <img src="QR.png" alt="Código QR de contacto" class="qr-code">
+                    <img src="QR.png" alt="QR de contacto" class="qr-code">
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 — Andrés Felipe Ramos Monroy | Servicios Profesionales de <span>Topografía</span></p>
+        <p>© 2026 — <span>Topógrafos de Cundinamarca</span> | Miguel Muñoz & Andrés Ramos</p>
     </footer>
 
 </body>
